@@ -1,15 +1,24 @@
+import {Button} from "@material-ui/core"
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import PersonIcon from '@material-ui/icons/Person';
+import MailIcon from '@material-ui/icons/Mail';
 const User = ({user}) => {
-    console.log(user.item);
+    // console.log(user.item);
     return (
-        <div className="col-12 col-md-6 col-lg-3 my-3">
+        <div className="col-12 col-md-6 col-lg-6 my-3 magical-appear">
             <div className="card">
                 <div className="card-body">
-                    <h5 className="card-title">{user.name}</h5>
-                    <h6 className="card-subtitle mb-2 text-muted">@{user.username}</h6>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    {/* <a href="#" className="card-link">Card link</a>
-                    <a href="#" className="card-link">Another link</a> */}
-                    <button type="button" className="btn btn-primary">View More</button>
+                    <div className="row">
+                        <div className="col-lg-8 col-12">
+                            <h5 className="card-title"><PersonIcon/> {user.name}</h5>
+                            <p className="card-text"><MailIcon/> {user.email}</p>
+                            <h6 className="card-subtitle mb-2 text-muted">@{user.username}</h6>
+                        </div>
+                        <div className="col-lg-4 col-md-12">
+                            <Button startIcon={<AccountCircleIcon/>} 
+                            variant="contained" color="primary">View User</Button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

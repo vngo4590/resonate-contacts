@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.magical-appear {
+  animation-name: show-up;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

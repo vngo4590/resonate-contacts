@@ -5,6 +5,7 @@ import {useState} from 'react'
 // what we want
 import Fuse from 'fuse.js'
 import Users from '../components/Users';
+import SearchIcon from '@material-ui/icons/Search';
 
 
 const UserSearch = ({users}) => {
@@ -57,8 +58,12 @@ const UserSearch = ({users}) => {
     return (
         <>
             <h1 className="display-1">Contact</h1>
-            <div className="my-5">
-                <input className="form-control form-control-lg" value={query} onChange={queryChangeSearch} type="text" placeholder="Search user here ..." aria-label=".form-control-lg example"></input>
+            <div className="input-group input-group-lg my-5">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><SearchIcon/></span>
+                <input className="form-control"
+                value={query} 
+                onChange={queryChangeSearch} 
+                type="text" placeholder="Who would you like to search for?" aria-label="User Search"></input>
             </div>
             <Users users={result}/>
         </>
