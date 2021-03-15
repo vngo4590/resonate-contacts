@@ -4,7 +4,7 @@ import {useState} from 'react'
 // Import fuse.js for fuzzy search, which predicts 
 // what we want
 import Fuse from 'fuse.js'
-import Users from './Users';
+import Users from '../components/Users';
 
 
 const UserSearch = ({users}) => {

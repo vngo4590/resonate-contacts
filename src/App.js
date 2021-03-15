@@ -1,11 +1,11 @@
 import './App.css';
 // Import routing mechanism
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 // Use state & effect from react
 import {useState, useEffect} from 'react'
 
-import UserSearch from './components/UserSearch';
-
+import UserSearch from './pages/UserSearch';
+import Home from './pages/Home';
 
 
 function App() {
@@ -41,11 +41,22 @@ function App() {
   
   
   return (
+    <Router>
     <div className="App container">
-      
-      {loading === false ? <h1>"We are still loading..."</h1> : <UserSearch users={users}/>}
-      
+      {/* Route to home page */}
+      <Route path="/" exact component={Home}/>
+      {/* Route to  */}
+      <Route path="/contact" render = { (props) =>
+        <>
+          {
+          loading === false ? 
+          <h1>Connecting ...</h1> : 
+            <UserSearch users={users}/>
+          }
+        </>
+      }/>
     </div>
+    </Router>
   );
 }
 
