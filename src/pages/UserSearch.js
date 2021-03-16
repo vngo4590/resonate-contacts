@@ -54,7 +54,7 @@ const UserSearch = ({users}) => {
     }
     // Now we need to instantitate the search result
     const result = fuse.search(query);
-    console.log(result);
+    
     return (
         <>
             <h1 className="display-1">Contact</h1>

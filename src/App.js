@@ -3,11 +3,9 @@ import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 // Use state & effect from react
 import {useState, useEffect} from 'react'
-
 import UserSearch from './pages/UserSearch';
 import Home from './pages/Home';
 import Menu from './layout/Menu'
-
 
 function App() {
   /**
@@ -44,9 +42,10 @@ function App() {
   return (
     <Router>
     <Menu />
+    {/* Route to home page */}
+    <Route path="/" exact component={Home}/>
     <div className="App container">
-      {/* Route to home page */}
-      <Route path="/" exact component={Home}/>
+      
       {/* Route to  */}
       <Route path="/contact" render = { (props) =>
         <>

@@ -1,5 +1,4 @@
 // Use state & effect from react
-import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
 const Menu = () => {
