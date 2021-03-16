@@ -12,7 +12,11 @@ To run this program, you need to run:
 1. install NodeJs from [NodeJs Website](https://nodejs.org/en/?ref=creativetim)
 2. Open your terminal and then type `npm install` to download all the depndencies that I have used in this project.
 3. Once you have sucessfully installed the dependencies, you just need to run `npm start`
+
+
 However, if you are unable to run the program because of the `module not found` problem, then you would need to do the following:
+
+
 1. Check if you have `.env` file in your root folder
 2. If you don't have it, then you need to create it and add the line `NODE_PATH=./src` onto the file
 3. Once the above is done, you need to go to the `package.json` file and change the line
